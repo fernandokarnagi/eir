@@ -1,10 +1,11 @@
-import goalSeek from 'goal-seek';
+const goalseekLib = require("./lib/goalseek");
 
 const fn = (x, y, z) => x * y * z;
-const fnParams = [4, 5, 6];
+const fnParams = [1, 2, 3];
+
 
 try {
-    const result = goalSeek({
+    const result = goalseekLib.goalSeek({
         fn,
         fnParams,
         percentTolerance: 1,
