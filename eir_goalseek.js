@@ -3,7 +3,7 @@ const eirLib = require("./lib/eir");
 const goalseekLib = require("./lib/goalseek");
 
 const loanAmount = 1000;
-const tenor = 12; // in months
+const tenor = 36; // in months
 const nominalInterestRateMonthly = 1;
 const startMonth = "01/2022";
 const showLog = false;
@@ -28,9 +28,9 @@ try {
     const result = goalseekLib.goalSeek({
         fn,
         fnParams,
-        amountTolerance: 1,
+        amountTolerance: 0.1,
         maxIterations: 10000000,
-        maxStep: 0.005,
+        maxStep: 0.008,
         goal: 0,
         independentVariableIdx: 4
     });
