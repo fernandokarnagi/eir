@@ -3,10 +3,19 @@ const eirLib = require("./lib/eir");
 const goalseekLib = require("./lib/goalseek");
 
 const loanAmount = 1000;
-const tenor = 24; // in months
+const tenor = 12; // in months
 const nominalInterestRateMonthly = 1;
 const startMonth = "01/2022";
 const showLog = false;
+
+console.log("============================");
+console.log("Interest Rate Calculator");
+console.log("----------------------------");
+console.log("Loan amount S$         : " + loanAmount);
+console.log("Tenor (months)         : " + tenor);
+console.log("Monthly Interest (%)   : " + nominalInterestRateMonthly);
+console.log("Start month            : " + moment(startMonth, "MM/YYYY").format("MMM-YYYY"));
+console.log("----------------------------");
 
 const eir = 1;
 const fn = (a, b, c, d, e) => {
